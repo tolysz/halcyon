@@ -403,7 +403,9 @@ build_sandbox_dir () {
 	esac
 
 	if [[ -f "${source_dir}/.halcyon/sandbox-extra-configure-flags" ]]; then
+		set -f; IFS=$'\n'
 		opts_a=( $( <"${source_dir}/.halcyon/sandbox-extra-configure-flags" ) ) || true
+		set +f; unset IFS
 	fi
 
 	log 'Building sandbox'
