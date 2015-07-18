@@ -7,7 +7,7 @@ install_os_packages () {
 	uid="$2"
 
 	case "${platform}" in
-	'linux-amzn-2014.09-'*)
+	'linux-amzn-2014.09-'*|'linux-amzn-2015.03-'*)
 		sudo bash -c "yum groupinstall -y 'Development Tools' &&
 			yum install -y git pigz zlib-devel" || return 1
 		;;

@@ -471,7 +471,7 @@ symlink_ghc_x86_64_libs () {
 	'freebsd-10'*)
 		url=$( map_ghc_version_to_freebsd_x86_64_url "${ghc_version}" ) || return 1
 		;;
-	'linux-amzn-2014.09'*|'linux-amzn-2015.03'*|'linux-centos-6'*|'linux-rhel-6'*)
+	'linux-amzn-2014.09'*|'linux-amzn-'*|'linux-centos-6'*|'linux-rhel-6'*)
 		gmp_file='/usr/lib64/libgmp.so.3'
 		tinfo_file='/lib64/libtinfo.so.5'
 		if (( ghc_major < 7 || ghc_minor < 10 )); then
